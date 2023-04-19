@@ -56,78 +56,6 @@
         <label>Business Analyst</label>
     </customValue>
     <customValue>
-        <fullName>GCTT</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>GCTT</label>
-    </customValue>
-    <customValue>
-        <fullName>Treasury</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Treasury</label>
-    </customValue>
-    <customValue>
-        <fullName>Treasury Top Management</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Treasury Top Management</label>
-    </customValue>
-    <customValue>
-        <fullName>P2P/Accounts Payable</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>P2P/Accounts Payable</label>
-    </customValue>
-    <customValue>
-        <fullName>P2P Top Management</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>P2P Top Management</label>
-    </customValue>
-    <customValue>
-        <fullName>Collections</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Collections</label>
-    </customValue>
-    <customValue>
-        <fullName>Entity Directors / EA&apos;s</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Entity Directors / EA&apos;s</label>
-    </customValue>
-    <customValue>
-        <fullName>SEC/Technical Accounting</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>SEC/Technical Accounting</label>
-    </customValue>
-    <customValue>
-        <fullName>Acquired business teams</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Acquired business teams</label>
-    </customValue>
-    <customValue>
-        <fullName>Tax team</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Tax team</label>
-    </customValue>
-    <customValue>
-        <fullName>M&amp;A team</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>M&amp;A team</label>
-    </customValue>
-    <customValue>
-        <fullName>Legal team</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Legal team</label>
-    </customValue>
-    <customValue>
         <fullName>ES Ops</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -192,6 +120,78 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Tax Top Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal team</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Legal team</label>
+    </customValue>
+    <customValue>
+        <fullName>M&amp;A team</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>M&amp;A team</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax team</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tax team</label>
+    </customValue>
+    <customValue>
+        <fullName>Acquired business teams</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Acquired business teams</label>
+    </customValue>
+    <customValue>
+        <fullName>SEC/Technical Accounting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SEC/Technical Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity Directors / EA&apos;s</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Entity Directors / EA&apos;s</label>
+    </customValue>
+    <customValue>
+        <fullName>Collections</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Collections</label>
+    </customValue>
+    <customValue>
+        <fullName>P2P Top Management</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>P2P Top Management</label>
+    </customValue>
+    <customValue>
+        <fullName>P2P/Accounts Payable</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>P2P/Accounts Payable</label>
+    </customValue>
+    <customValue>
+        <fullName>Treasury Top Management</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Treasury Top Management</label>
+    </customValue>
+    <customValue>
+        <fullName>GCTT</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GCTT</label>
+    </customValue>
+    <customValue>
+        <fullName>Treasury</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Treasury</label>
     </customValue>
     <masterLabel>PMT Roles</masterLabel>
     <sorted>false</sorted>

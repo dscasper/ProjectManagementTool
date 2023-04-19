@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>If Is PMT User consider for Availability</description>
+        <name>If_Is_PMT_User_consider_for_Availability_Chagnes</name>
+        <label>If Is PMT User consider for Availability Chagnes</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Did Not Change</defaultConnectorLabel>
+        <rules>
+            <name>Is_PMT_User_consider_for_Availability_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Is_PMT_User_consider_for_Availability__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Is_PMT_User_consider_for_Availability__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Resource_Availability_for_Active_User</targetReference>
+            </connector>
+            <label>Is PMT User consider for Availability Changed</label>
+        </rules>
+    </decisions>
+    <description>Flow that controls User Flow Post Save actions</description>
+    <environments>Default</environments>
+    <interviewLabel>User Change Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>User Change Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>If_Is_PMT_User_consider_for_Availability_Chagnes</targetReference>
+        </connector>
+        <object>User</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Create Resource Availability for Active User</description>
+        <name>Create_Resource_Availability_for_Active_User</name>
+        <label>Create Resource Availability for Active User</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <flowName>Create_Resource_Availability_for_Active_User</flowName>
+        <inputAssignments>
+            <name>User</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Create PMT Resource Availability on User Activation</description>
+        <name>Create_PMT_Resource_Availability_on_User_Activation</name>
+        <label>Create PMT Resource Availability on User Activation</label>
+        <locationX>50</locationX>
+        <locationY>278</locationY>
+        <actionName>PMT_CreateResourceAvailability</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>lstOfUserIds</name>
+            <value>
+                <elementReference>User.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>If User Is PMT User consider for Availability is checked true</description>
+        <name>If_Is_PMT_User_consider_for_Availability_is_true</name>
+        <label>If Is PMT User consider for Availability is true</label>
+        <locationX>182</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>False</defaultConnectorLabel>
+        <rules>
+            <name>True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>User.Is_PMT_User_consider_for_Availability__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_PMT_Resource_Availability_on_User_Activation</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <description>Creates Resource Availability Records for User where Is PMT User consider for Availability is true</description>
+    <environments>Default</environments>
+    <interviewLabel>Create Resource Availabilty for Active User {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Resource Availability for Active User</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>If_Is_PMT_User_consider_for_Availability_is_true</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>User to be validated if PMT Is PMT User consider for Availability is checked true</description>
+        <name>User</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>User</objectType>
+    </variables>
+</Flow>
